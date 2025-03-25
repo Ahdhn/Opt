@@ -11,7 +11,7 @@ ifeq ($(UNAME), Linux)
 endif
 
 FLAGS += -O3 -g -std=c++11 -I$(SRC) -I$(SRC)/cutil/inc -I../../API/release/include -I$(TERRAHOME)/include -I$(CUDAHOME)/include -I../external/mLib/include -I../external -I../external/OpenMesh/include
-NVCCFLAGS += -arch sm_30 $(FLAGS)
+NVCCFLAGS += -arch sm_89 $(FLAGS)
 LFLAGS += -std=c++11 -L../../API/release/lib -L$(CUDAHOME)/lib$(S4) -lcudart -L$(TERRAHOME)/lib -lterra -ldl -lz
 UNAME := $(shell uname)
 
